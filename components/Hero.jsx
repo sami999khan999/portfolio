@@ -1,13 +1,20 @@
-import { RiArrowDownSLine } from "react-icons/ri";
+import {
+  RiArrowDownSLine,
+  RiBriefcase5Fill,
+  RiTeamFill,
+  RiTodoFill,
+} from "react-icons/ri";
 import { Download, Send } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Socials from "./Socials";
+import DevImg from "./DevImg";
+import Badge from "./Badge";
 
 const Hero = () => {
   return (
     <section className="py-12 xl:py-12 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex flex-col max-w-[600px] justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold md-4 text-primary tracking-[4px]">
@@ -37,8 +44,33 @@ const Hero = () => {
               iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
             />
           </div>
+
           <div className="hidden xl:flex relative">
-            <div className="bg-hero_shape2_light w-[500px] h-[500px]"></div>
+            <Badge
+              containerStyles="absolute top-[40%] -left-[5rem]"
+              icon={<RiBriefcase5Fill />}
+              endCountNum={3}
+              badgeText="Years Of Experience"
+            />
+            <Badge
+              containerStyles="absolute top-[80%] -left-[1rem]"
+              icon={<RiTodoFill />}
+              endCountNum={26}
+              badgeText="Finished Projects"
+            />
+            <Badge
+              containerStyles="absolute top-[55%] -right-8
+              "
+              icon={<RiTeamFill />}
+              endCountNum={13}
+              badgeText="Worked With"
+            />
+
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+            <DevImg
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              imgSrc="/hero/developer.png"
+            />
           </div>
         </div>
 
