@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import DevImg from "./DevImg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import Image from "next/image";
 
 const infoData = [
   {
@@ -88,27 +89,16 @@ const skillData = [
     title: "tools",
     data: [
       {
-        name: "HTML, CSS, JavaScript, TypeScript, React, Next.js",
+        imgPath: "/about/vscode.svg",
       },
       {
-        name: "Node.js, Express, MongoDB, Firebase, Clerk, Stripe",
-      },
-    ],
-  },
-  {
-    title: "tools",
-    data: [
-      {
-        imPath: "/about/vscode.svg",
+        imgPath: "/about/figma.svg",
       },
       {
-        imPath: "/about/figma.svg",
+        imgPath: "/about/notion.svg",
       },
       {
-        imPath: "/about/notion.svg",
-      },
-      {
-        imPath: "/about/wordpress.svg",
+        imgPath: "/about/wordpress.svg",
       },
     ],
   },
@@ -228,7 +218,7 @@ const About = () => {
                       {/* education */}
                       <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary pb-2">
-                          <Briefcase />
+                          <GraduationCap size={28} />
                           <h4 className="capitalize font-medium">
                             {getData(qualificationData, "education").title}
                           </h4>
@@ -266,7 +256,59 @@ const About = () => {
                 </TabsContent>
 
                 {/* Content for Skills Tab */}
-                <TabsContent value="skills">skills</TabsContent>
+                <TabsContent value="skills">
+                  <div className="text-center md:text-left">
+                    <h3 className="h3 mb-8">Tools I Use Everyday</h3>
+                    <div className="mb-16">
+                      <h4 className="text-xl font-semibold mb-2">Skills </h4>
+                      <div className="border-b border-border mb-4"></div>
+                      {/* skills */}
+                      <div className="mb-16">
+                        {getData(skillData, "skills").data.map(
+                          (item, index) => {
+                            const { name } = item;
+                            return (
+                              <div
+                                className="w-2/4 text-center md:text-left mx-auto md:mx-0"
+                                key={index}
+                              >
+                                <div className="font-medium ">{name}</div>
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                      {/* tools */}
+                      <div>
+                        <h4 className="text-xl font-semibold mb-2 md:text-left">
+                          Tools
+                        </h4>
+                        <div className="border-b border-border mb-4"></div>
+                        <div>
+                          {getData(skillData, "tools").data.map(
+                            (item, index) => {
+                              const { imgPath } = item;
+                              {
+                                console.log("Image Path:", imgPath);
+                              }
+                              return (
+                                <div>
+                                  <Image
+                                    src={imgPath}
+                                    alt=""
+                                    width={38}
+                                    height={38}
+                                    priority
+                                  />
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
               </div>
             </Tabs>
           </div>
