@@ -77,10 +77,10 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "HTML, CSS, JavaScript, TypeScript, React, Next.js",
+        name: "HTML | CSS | JavaScript | TypeScript | React | Next.js",
       },
       {
-        name: "Node.js, Express, MongoDB, Firebase, Clerk, Stripe",
+        name: "Node.js | Express | MongoDB | Firebase | Clerk | Stripe",
       },
     ],
   },
@@ -258,12 +258,12 @@ const About = () => {
                 {/* Content for Skills Tab */}
                 <TabsContent value="skills">
                   <div className="text-center md:text-left">
-                    <h3 className="h3 mb-8">Tools I Use Everyday</h3>
+                    <h3 className="h3 mb-8">Tools, That I Use Everyday</h3>
                     <div className="mb-16">
                       <h4 className="text-xl font-semibold mb-2">Skills </h4>
                       <div className="border-b border-border mb-4"></div>
                       {/* skills */}
-                      <div className="mb-16">
+                      <div className="mb-16 space-y-2 text-xl antialiased">
                         {getData(skillData, "skills").data.map(
                           (item, index) => {
                             const { name } = item;
@@ -284,7 +284,7 @@ const About = () => {
                           Tools
                         </h4>
                         <div className="border-b border-border mb-4"></div>
-                        <div>
+                        <div className="flex gap-x-8 justify-center md:justify-start ">
                           {getData(skillData, "tools").data.map(
                             (item, index) => {
                               const { imgPath } = item;
@@ -296,8 +296,8 @@ const About = () => {
                                   <Image
                                     src={imgPath}
                                     alt=""
-                                    width={38}
-                                    height={38}
+                                    width={48}
+                                    height={48}
                                     priority
                                   />
                                 </div>
