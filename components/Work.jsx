@@ -1,41 +1,47 @@
 "use client";
 
 import Link from "next/link";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Pagination } from "swiper/modules";
+
 import { Button } from "./ui/button";
+import ProjectCard from "./ProjectCard";
 
 const projectData = [
   {
-    image: "/word/1.png",
+    image: "/work/1.png",
     category: "react js",
     name: "Proxima",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam enim explicabo est voluptatum? Expedita quisquam, doloremque adipisci dignissimos exercitationem ratione!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    link: "/",
+    github: "/",
   },
   {
-    image: "/word/2.png",
+    image: "/work/2.png",
     category: "react js",
     name: "Proxima",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam enim explicabo est voluptatum? Expedita quisquam, doloremque adipisci dignissimos exercitationem ratione!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    link: "/",
+    github: "/",
   },
   {
-    image: "/word/3.png",
+    image: "/work/3.png",
     category: "react js",
     name: "Proxima",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam enim explicabo est voluptatum? Expedita quisquam, doloremque adipisci dignissimos exercitationem ratione!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    link: "/",
+    github: "/",
   },
   {
-    image: "/word/4.png",
+    image: "/work/4.png",
     category: "react js",
     name: "Proxima",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam enim explicabo est voluptatum? Expedita quisquam, doloremque adipisci dignissimos exercitationem ratione!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ? ",
+    link: "/",
+    github: "/",
   },
 ];
 
@@ -56,10 +62,25 @@ const Work = () => {
         </div>
 
         {/* slider */}
-        <div>
-          <Swiper>
+        <div className="md:max-w-[1000px] md:absolute right-0 top-0 ">
+          <Swiper
+            className="h-[500px]"
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+            }}
+            spaceBetween={30}
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+          >
             {projectData.slice(0, 4).map((project, index) => {
-              return <SwiperSlide key={index}> </SwiperSlide>;
+              return (
+                <SwiperSlide key={index}>
+                  <ProjectCard project={project} />
+                </SwiperSlide>
+              );
             })}
           </Swiper>
         </div>
