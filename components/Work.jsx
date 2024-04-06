@@ -48,7 +48,7 @@ const projectData = [
 const Work = () => {
   return (
     <section className="relative mb-12 md:mb-48">
-      <div className="container mx-auto">
+      <div className="container mx-auto flex flex-col md:flex-row">
         <div className="max-w-[400px] mx-auto md:mx-0 text-center md:text-left mb-12 md:h-[400px] flex flex-col justify-center items-center md:items-start">
           <h2 className="section-title mb-4">Latest Project</h2>
           <p className="subtitle mb-8">
@@ -62,12 +62,12 @@ const Work = () => {
         </div>
 
         {/* slider */}
-        <div className="md:max-w-[1000px] md:absolute right-0 top-0 ">
+        <div className="md:max-w-[1000px] ">
           <Swiper
             className="h-[500px]"
             slidesPerView={1}
             breakpoints={{
-              640: {
+              768: {
                 slidesPerView: 2,
               },
             }}

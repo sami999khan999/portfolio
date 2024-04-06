@@ -94,6 +94,12 @@
   @apply text-[22px] font-semibold;
 }
 
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-primary;
+}
+
 /* * {
   @apply transition-colors duration-200;
 } */
