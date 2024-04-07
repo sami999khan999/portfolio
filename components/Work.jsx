@@ -10,7 +10,7 @@ import { Pagination } from "swiper/modules";
 import { Button } from "./ui/button";
 import ProjectCard from "./ProjectCard";
 
-const projectData = [
+export const projectData = [
   {
     image: "/work/1.png",
     category: "react js",
@@ -21,7 +21,7 @@ const projectData = [
   },
   {
     image: "/work/2.png",
-    category: "react js",
+    category: "next js",
     name: "Proxima",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
     link: "/",
@@ -29,7 +29,7 @@ const projectData = [
   },
   {
     image: "/work/3.png",
-    category: "react js",
+    category: "fullstack",
     name: "Proxima",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
     link: "/",
@@ -47,7 +47,7 @@ const projectData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 md:mb-48">
+    <section className="relative ">
       <div className="container mx-auto flex flex-col md:flex-row gap-2">
         <div className="max-w-[400px] mx-auto md:mx-0 text-center md:text-left mb-12 md:h-[400px] flex flex-col justify-center items-center md:items-start">
           <h2 className="section-title mb-4">Latest Project</h2>
@@ -62,7 +62,7 @@ const Work = () => {
         </div>
 
         {/* slider */}
-        <div className="md:max-w-[1000px] ">
+        <div className="md:max-w-[1000px] md:absolute right-0 top-0">
           <Swiper
             className="h-[500px]"
             slidesPerView={1}

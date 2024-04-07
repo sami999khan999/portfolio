@@ -55,7 +55,7 @@ const reviewsData = [
 
 const Reviews = () => {
   return (
-    <section className="mb-12 md:mb-32">
+    <section className="">
       <div className="container mx-auto">
         <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
         {/* slider */}

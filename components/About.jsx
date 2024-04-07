@@ -7,6 +7,19 @@ import {
   PhoneCall,
   User2,
 } from "lucide-react";
+
+import { FaHtml5, FaCss3, FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+  SiFirebase,
+  SiStripe,
+} from "react-icons/si";
+import { PiUserCircleFill } from "react-icons/pi";
+
 import DevImg from "./DevImg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import Image from "next/image";
@@ -77,10 +90,52 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "HTML | CSS | JavaScript | TypeScript | React | Next.js",
+        name: "HTML",
+        icon: <FaHtml5 />,
       },
       {
-        name: "Node.js | Express | MongoDB | Firebase | Clerk | Stripe",
+        name: "CSS",
+        icon: <FaCss3 />,
+      },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+      },
+      {
+        name: "React",
+        icon: <FaReact />,
+      },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+      },
+      {
+        name: "Node.js",
+        icon: <FaNodeJs />,
+      },
+      {
+        name: "Express",
+        icon: <SiExpress />,
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+      },
+      {
+        name: "Firebase",
+        icon: <SiFirebase />,
+      },
+      {
+        name: "Clerk",
+        icon: <PiUserCircleFill />,
+      },
+      {
+        name: "Stripe",
+        icon: <SiStripe />,
       },
     ],
   },
@@ -110,12 +165,10 @@ const About = () => {
   };
 
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-32 ">
-      <div className="container mx-auto space-y-20">
+    <section className="">
+      <div className="container mx-auto space-y-10 md:space-y-20">
         {/* Section Title */}
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-          About Me
-        </h2>
+        <h2 className="section-title xl:mb-16 text-center mx-auto">About Me</h2>
 
         <div className="flex flex-col xl:flex-row ">
           <div className="hidden xl:flex flex-1 relative">
@@ -263,16 +316,19 @@ const About = () => {
                       <h4 className="text-xl font-semibold mb-2">Skills </h4>
                       <div className="border-b border-border mb-4"></div>
                       {/* skills */}
-                      <div className="mb-16 space-y-2 text-xl antialiased">
+                      <div className="mb-16 grid grid-cols-3 md:grid-cols-5 gap-y-6 text-xl antialiased">
                         {getData(skillData, "skills").data.map(
                           (item, index) => {
                             const { name } = item;
                             return (
-                              <div
-                                className="w-2/4 text-center md:text-left mx-auto md:mx-0"
-                                key={index}
-                              >
-                                <div className="font-medium ">{name}</div>
+                              <div className="space-y-1" key={index}>
+                                <div className="flex flex-col items-center text-2xl md:text-4xl text-primary">
+                                  {item.icon}
+                                </div>
+
+                                <div className="font-semibold text-xl text-center ">
+                                  {name}
+                                </div>
                               </div>
                             );
                           }

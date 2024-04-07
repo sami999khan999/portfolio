@@ -30,7 +30,7 @@ const servidesData = [
 
 const Services = () => {
   return (
-    <section className="mb-12 md:mb-36">
+    <section className="md:pb-16">
       <div className="container mx-auto">
         <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">
           My Services
