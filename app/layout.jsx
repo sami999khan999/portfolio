@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 
+import { Toaster } from "react-hot-toast";
+
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,6 +23,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <Toaster position="bottom-right" reverseOrder={false} />
         </ThemeProvider>
       </body>
     </html>
