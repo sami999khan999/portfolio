@@ -8,50 +8,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 import Image from "next/image";
 
-const reviewsData = [
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Richard Thomas",
-    job: "Chief",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia eius!",
-  },
-  {
-    avatar: "/reviews/avatar-2.png",
-    name: "Richard Thomas",
-    job: "Chief",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia eius!",
-  },
-  {
-    avatar: "/reviews/avatar-3.png",
-    name: "Richard Thomas",
-    job: "Chief",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia eius!",
-  },
-  {
-    avatar: "/reviews/avatar-4.png",
-    name: "Richard Thomas",
-    job: "Chief",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia eius!",
-  },
-  {
-    avatar: "/reviews/avatar-5.png",
-    name: "Richard Thomas",
-    job: "Chief",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia eius!",
-  },
-  {
-    avatar: "/reviews/avatar-6.png",
-    name: "Richard Thomas",
-    job: "Chief",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quam mollitia eius!",
-  },
-];
+import { reviewsData } from "@/lib/data";
 
 const Reviews = () => {
   return (

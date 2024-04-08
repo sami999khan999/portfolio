@@ -1,163 +1,10 @@
-import {
-  Briefcase,
-  Calendar,
-  GraduationCap,
-  HomeIcon,
-  MailIcon,
-  PhoneCall,
-  User2,
-} from "lucide-react";
+import { Briefcase, GraduationCap } from "lucide-react";
 
-import { FaHtml5, FaCss3, FaReact, FaNodeJs } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiJavascript,
-  SiNextdotjs,
-  SiExpress,
-  SiMongodb,
-  SiFirebase,
-  SiStripe,
-} from "react-icons/si";
-import { PiUserCircleFill } from "react-icons/pi";
-
+import Image from "next/image";
 import DevImg from "./DevImg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import Image from "next/image";
 
-const infoData = [
-  {
-    icon: <User2 size={20} />,
-    text: "Sami Khan",
-  },
-  {
-    icon: <PhoneCall size={20} />,
-    text: "+880 17802-77493",
-  },
-  {
-    icon: <MailIcon size={20} />,
-    text: "sami999khan999@gmail.com",
-  },
-  {
-    icon: <Calendar size={20} />,
-    text: "Born on 10 Jan, 2004",
-  },
-  {
-    icon: <GraduationCap size={20} />,
-    text: "Pursuing",
-  },
-  {
-    icon: <HomeIcon size={20} />,
-    text: "Tangail Dhaka, Bangladesh",
-  },
-];
-
-const qualificationData = [
-  {
-    title: "education",
-    data: [
-      {
-        university: "HSC",
-        qualification: "High School Graduate",
-        year: "18-19",
-      },
-      {
-        university: "HABHIT",
-        qualification: "Computer Science",
-        year: "2020-current",
-      },
-    ],
-  },
-
-  {
-    title: "experience",
-    data: [
-      {
-        company: "HSC",
-        role: "Student",
-        year: "18-19",
-      },
-      {
-        company: "HABHIT",
-        role: "Computer Science",
-        year: "2020-current",
-      },
-    ],
-  },
-];
-
-const skillData = [
-  {
-    title: "skills",
-    data: [
-      {
-        name: "HTML",
-        icon: <FaHtml5 />,
-      },
-      {
-        name: "CSS",
-        icon: <FaCss3 />,
-      },
-      {
-        name: "JavaScript",
-        icon: <SiJavascript />,
-      },
-      {
-        name: "TypeScript",
-        icon: <SiTypescript />,
-      },
-      {
-        name: "React",
-        icon: <FaReact />,
-      },
-      {
-        name: "Next.js",
-        icon: <SiNextdotjs />,
-      },
-      {
-        name: "Node.js",
-        icon: <FaNodeJs />,
-      },
-      {
-        name: "Express",
-        icon: <SiExpress />,
-      },
-      {
-        name: "MongoDB",
-        icon: <SiMongodb />,
-      },
-      {
-        name: "Firebase",
-        icon: <SiFirebase />,
-      },
-      {
-        name: "Clerk",
-        icon: <PiUserCircleFill />,
-      },
-      {
-        name: "Stripe",
-        icon: <SiStripe />,
-      },
-    ],
-  },
-
-  {
-    title: "tools",
-    data: [
-      {
-        imgPath: "/about/vscode.svg",
-      },
-      {
-        imgPath: "/about/figma.svg",
-      },
-      {
-        imgPath: "/about/notion.svg",
-      },
-      {
-        imgPath: "/about/wordpress.svg",
-      },
-    ],
-  },
-];
+import { infoData, qualificationData, skillData } from "@/lib/data";
 
 const About = () => {
   const getData = (arr, title) => {
@@ -233,14 +80,14 @@ const About = () => {
                     {/* experience and endcation */}
                     <div className="grid md:grid-cols-2 gap-y-8">
                       {/* experience */}
-                      <div className="space-y-8">
+                      {/* <div className="space-y-8">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary ">
                           <Briefcase />
                           <h4 className="capitalize font-medium">
                             {getData(qualificationData, "experience").title}
                           </h4>
                         </div>
-                        {/* list */}
+
                         <div className="flex flex-col gap-y-8 ">
                           {getData(qualificationData, "experience").data.map(
                             (item, index) => {
@@ -267,7 +114,7 @@ const About = () => {
                             }
                           )}
                         </div>
-                      </div>
+                      </div> */}
                       {/* education */}
                       <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary pb-2">
@@ -326,7 +173,7 @@ const About = () => {
                                   {item.icon}
                                 </div>
 
-                                <div className="font-semibold text-xl text-center ">
+                                <div className="text-secondary dark:text-secondary-foreground  text-base  text-center">
                                   {name}
                                 </div>
                               </div>
@@ -344,9 +191,7 @@ const About = () => {
                           {getData(skillData, "tools").data.map(
                             (item, index) => {
                               const { imgPath } = item;
-                              {
-                                console.log("Image Path:", imgPath);
-                              }
+
                               return (
                                 <div>
                                   <Image

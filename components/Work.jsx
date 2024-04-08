@@ -10,50 +10,17 @@ import { Pagination } from "swiper/modules";
 import { Button } from "./ui/button";
 import ProjectCard from "./ProjectCard";
 
-export const projectData = [
-  {
-    image: "/work/1.png",
-    category: "react js",
-    name: "Proxima",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "next js",
-    name: "Proxima",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: "fullstack",
-    name: "Proxima",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "react js",
-    name: "Proxima",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ? ",
-    link: "/",
-    github: "/",
-  },
-];
+import { projectData } from "@/lib/data";
 
 const Work = () => {
   return (
     <section className="relative ">
-      <div className="container mx-auto flex flex-col md:flex-row gap-2">
-        <div className="max-w-[400px] mx-auto md:mx-0 text-center md:text-left mb-12 md:h-[400px] flex flex-col justify-center items-center md:items-start">
+      <div className="container mx-auto flex flex-col md:flex-row">
+        <div className="max-w-[350px] mx-auto md:mx-0 text-center md:text-left mb-12 md:h-[400px] flex flex-col justify-center items-center md:items-start">
           <h2 className="section-title mb-4">Latest Project</h2>
           <p className="subtitle mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            ducimus.
+            Explore some of the innovative projects I have been working on
+            recently.
           </p>
 
           <Link href="/projects">

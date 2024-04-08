@@ -35,9 +35,14 @@ const Hero = () => {
                 </Button>
               </Link>
 
-              <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
-              </Button>
+              <a
+                href="/resume/SAMI-KHAN-MERN-Stack-Developer-Resume.pdf"
+                download="Sami-Khan-Resume.pdf"
+              >
+                <Button variant="secondary" className="gap-x-2">
+                  Resume <Download size={18} />
+                </Button>
+              </a>
             </div>
             <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0 mt-12"
@@ -50,7 +55,7 @@ const Hero = () => {
               containerStyles="absolute top-[40%] -left-[5rem]"
               icon={<RiBriefcase5Fill />}
               endCountNum={3}
-              badgeText="Years Of Experience"
+              badgeText="Years in Web Tech"
             />
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem]"

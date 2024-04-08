@@ -1,6 +1,6 @@
 "use client";
 
-import { projectData } from "@/components/Work";
+import { projectData } from "@/lib/data";
 import { useState } from "react";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/ProjectCard";
