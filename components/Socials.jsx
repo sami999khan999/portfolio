@@ -1,36 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import {
-  RiYoutubeFill,
-  RiLinkedinFill,
-  RiGithubFill,
-  RiFacebookBoxFill,
-  RiTwitterFill,
-} from "react-icons/ri";
 
-const icons = [
-  {
-    path: "/",
-    name: <RiLinkedinFill />,
-  },
-  {
-    path: "/",
-    name: <RiGithubFill />,
-  },
-  {
-    path: "/",
-    name: <RiYoutubeFill />,
-  },
-  {
-    path: "/",
-    name: <RiFacebookBoxFill />,
-  },
-  {
-    path: "/",
-    name: <RiTwitterFill />,
-  },
-];
+import { icons } from "@/lib/data";
 
 const Socials = ({ containerStyles, iconsStyles }) => {
   return (

@@ -28,14 +28,14 @@ const Projects = () => {
         </h2>
 
         <Tabs defaultValue={category} className="mb-24 md:mb-48">
-          <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none">
+          <TabsList className="w-fit flex flex-col md:flex-row md:gap-20 mb-12 mx-auto md:border dark:border-none">
             {categories.map((category, index) => {
               return (
                 <TabsTrigger
                   onClick={() => setCategory(category)}
                   value={category}
                   key={index}
-                  className="capitalize w-[162px] md:w-auto"
+                  className="capitalize w-[162px]"
                 >
                   {category}
                 </TabsTrigger>
