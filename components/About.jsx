@@ -15,9 +15,18 @@ const About = () => {
     <section className="">
       <div className="container mx-auto space-y-10 md:space-y-20">
         {/* Section Title */}
-        <h2 className="section-title xl:mb-16 text-center mx-auto">About Me</h2>
+        <h2
+          className="section-title xl:mb-16 text-center mx-auto"
+          data-aos="fade-up"
+        >
+          About Me
+        </h2>
 
-        <div className="flex flex-col xl:flex-row ">
+        <div
+          className="flex flex-col xl:flex-row"
+          data-aos="fade-up"
+          data-aos-delay={100}
+        >
           <div className="hidden xl:flex flex-1 relative">
             {/* Developer Image */}
             <DevImg

@@ -12,11 +12,18 @@ const Services = () => {
   return (
     <section className="md:pb-16">
       <div className="container mx-auto">
-        <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">
+        <h2
+          className="section-title mb-12 xl:mb-24 text-center mx-auto"
+          data-aos="fade-up"
+        >
           My Services
         </h2>
         {/* gird item */}
-        <div className="grid md:grid-cols-3 justify-center gap-y-12 md:gap-y-24 md:gap-x-8">
+        <div
+          className="grid md:grid-cols-3 justify-center gap-y-12 md:gap-y-24 md:gap-x-8"
+          data-aos="fade-right"
+          data-aos-delay={100}
+        >
           {servidesData.map((item, index) => {
             return (
               <Card

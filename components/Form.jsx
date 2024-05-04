@@ -50,46 +50,55 @@ const Form = () => {
   };
 
   return (
-    <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
-      <div className="relative flex items-center">
-        <Input
-          type="name"
-          id="name"
-          name="name"
-          value={form.name}
-          placeholder="Name"
-          onChange={handleChande}
-        />
-        <User className="absolute right-6" />
-      </div>
+    <div
+      className="w-full md:w-3/5 md:bg-tertiary md:dark:bg-secondary/40 px-2 py-2 md:px-10 md:py-6 rounded-3xl "
+      data-aos="fade-left"
+      data-aos-delay={100}
+    >
+      <form className="flex flex-col gap-y-4 " onSubmit={handleSubmit}>
+        <div className="relative flex items-center">
+          <Input
+            type="name"
+            id="name"
+            name="name"
+            value={form.name}
+            placeholder="Name"
+            onChange={handleChande}
+          />
+          <User className="absolute right-6" />
+        </div>
 
-      <div className="relative flex items-center">
-        <Input
-          type="email"
-          id="email"
-          name="email"
-          value={form.email}
-          placeholder="Email"
-          onChange={handleChande}
-        />
-        <MailIcon className="absolute right-6" />
-      </div>
+        <div className="relative flex items-center">
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            value={form.email}
+            placeholder="Email"
+            onChange={handleChande}
+          />
+          <MailIcon className="absolute right-6" />
+        </div>
 
-      <div className="relative flex items-center">
-        <Textarea
-          placeholder="Type your Message Here..."
-          name="message"
-          onChange={handleChande}
-          value={form.message}
-        />
-        <MessageSquare className="absolute top-4 right-6" />
-      </div>
+        <div className="relative flex items-center">
+          <Textarea
+            placeholder="Type your Message Here..."
+            name="message"
+            onChange={handleChande}
+            value={form.message}
+          />
+          <MessageSquare className="absolute top-4 right-6" />
+        </div>
 
-      <Button type="submit" className="flex items-center gap-x-1 max-w-[166px]">
-        Send
-        <ArrowRightIcon size={20} />
-      </Button>
-    </form>
+        <Button
+          type="submit"
+          className="flex items-center gap-x-1 max-w-[166px]"
+        >
+          Send
+          <ArrowRightIcon size={20} />
+        </Button>
+      </form>
+    </div>
   );
 };
 

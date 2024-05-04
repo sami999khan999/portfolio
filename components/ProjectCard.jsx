@@ -9,14 +9,17 @@ const ProjectCard = ({ project }) => {
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
         <div className="relative w-full h-[300px] flex items-center justify-center bg-transparent dark:bg-secondary/40 md:bg-work_Project_bg_light xl:bg-[110%] md:dark:bg-work_Project_bg_dark">
-          <Image
-            className="absolute bottom-0 shadow-2xl"
-            src={project.image}
-            width={247}
-            height={250}
-            alt=""
-            property
-          />
+          <div className="w-[15.4rem] h-[13rem]  md:w-[20rem] md:h-[15rem] flex items-center justify-center absolute top-14 overflow-hidden rounded-t-xl shadow-xl shadow-gray-200 dark:shadow-gray-800">
+            <Image
+              className=" object-fill"
+              src={project.image}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="top"
+              alt=""
+              property
+            />
+          </div>
 
           <div className="flex gap-2">
             <Link
@@ -35,7 +38,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </CardHeader>
       <div className="h-full px-8 py-6">
-        <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
+        <Badge className="uppercase text-sm font-medium mb-2 absolute top-3 left-5">
           {project.category}
         </Badge>
         <h4 className="h4 mb-1 ">{project.name}</h4>

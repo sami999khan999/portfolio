@@ -17,18 +17,31 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex flex-col max-w-[600px] justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className="text-sm uppercase font-semibold md-4 text-primary tracking-[4px]">
+            <div
+              className="text-sm uppercase font-semibold md-4 text-primary tracking-[4px]"
+              data-aos="fade-down"
+            >
               Web Developer
             </div>
 
-            <h1 className="h1 mb-4">Hello, my name is Munum Khan Sami</h1>
+            <h1 className="h1 mb-4" data-aos="fade-down" data-aos-delay={100}>
+              Hello, my name is Munum Khan Sami
+            </h1>
 
-            <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
+            <p
+              className="subtitle max-w-[490px] mx-auto xl:mx-0"
+              data-aos="fade-down"
+              data-aos-delay={200}
+            >
               Brief description with insights into myself, my vocational
               journey, and what I engage in professionally.
             </p>
 
-            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0">
+            <div
+              className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0"
+              data-aos="fade-down"
+              data-aos-delay={300}
+            >
               <Link href="/contact">
                 <Button className="gap-x-2">
                   Contact Me <Send size={18} />

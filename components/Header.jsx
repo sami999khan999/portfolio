@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Logo />
 
-          <div className="flex items-center gap-x-6 ">
+          <div className="flex items-center gap-x-6" data-aos="fade-left">
             <Nav
               containerStyles="hidden xl:flex gap-x-8 items-center"
               linkStyles="relative hover:text-primary transition-all"

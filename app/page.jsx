@@ -11,8 +11,8 @@ export default function Home() {
     <main className="flex flex-col gap-20 md:gap-56">
       <Hero />
       <About />
-      <Services />
       <Work />
+      <Services />
       {/* <Reviews /> */}
       <Cta />
     </main>
