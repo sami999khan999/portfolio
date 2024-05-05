@@ -22,7 +22,7 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="text-muted-foreground text-sm md:text-lg">
+          <div className="text-muted-foreground text-xs md:text-lg">
             Copyright ©️ {new Date().getFullYear()} Sami Khan. All rights
             resurved.
           </div>
