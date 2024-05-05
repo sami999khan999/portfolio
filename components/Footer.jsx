@@ -3,7 +3,7 @@ import Socials from "./Socials";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-12">
+    <footer className="bg-secondary py-12" data-aos="fade-up">
       <div className="container mx-auto">
         <div className="flex flex-col gap-3 items-center justify-between">
           <div>
@@ -13,11 +13,7 @@ const Footer = () => {
             />
           </div>
 
-          <div
-            className="flex gap-6 border border-primary/20 dark:border-background p-6 rounded-xl max-sm:hidden"
-            data-aos="fade-left"
-            data-aos-delay={400}
-          >
+          <div className="flex gap-6 border border-primary/20 dark:border-background p-6 rounded-xl max-sm:hidden">
             {contactDetails.map((item, index) => (
               <div className="text-primary flex items-center justify-center gap-2">
                 <item.icon size={20} className="dark:text-white/70" />

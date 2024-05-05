@@ -57,10 +57,12 @@ const Hero = () => {
                 </Button>
               </a>
             </div>
-            <Socials
-              containerStyles="flex gap-x-6 mx-auto xl:mx-0 mt-12"
-              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
-            />
+            <div data-aos="fade-right" data-aos-delay={400}>
+              <Socials
+                containerStyles="flex gap-x-6 mx-auto xl:mx-0 mt-12"
+                iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+              />
+            </div>
           </div>
 
           <div className="hidden xl:flex relative">

@@ -6,11 +6,7 @@ import { icons } from "@/lib/data";
 
 const Socials = ({ containerStyles, iconsStyles }) => {
   return (
-    <div
-      className={`${containerStyles}`}
-      data-aos="fade-right"
-      data-aos-delay={400}
-    >
+    <div className={`${containerStyles}`}>
       {icons.map((icon) => {
         return (
           <Link href={icon.path}>
