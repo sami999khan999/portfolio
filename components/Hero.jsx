@@ -49,7 +49,7 @@ const Hero = () => {
               </Link>
 
               <a
-                href="/resume/SAMI-KHAN-MERN-Stack-Developer-Resume.pdf"
+                href="/resume/Munim-khan-sami.pdf.pdf"
                 download="Sami-Khan-Resume.pdf"
               >
                 <Button variant="secondary" className="gap-x-2">
