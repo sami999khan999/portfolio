@@ -25,7 +25,7 @@ const Hero = () => {
             </div>
 
             <h1 className="h1 mb-4" data-aos="fade-down" data-aos-delay={100}>
-              Hello, my name is Munum Khan Sami
+              Hello, my name is Munim Khan Sami
             </h1>
 
             <p
