@@ -49,8 +49,8 @@ const Hero = () => {
               </Link>
 
               <a
-                href="/resume/Munim-khan-sami.pdf.pdf"
-                download="Sami-Khan-Resume.pdf"
+                href="/resume/Munim_Khan_Sami_Resume.pdf"
+                download="Munim_Khan_Sami_Resume.pdf"
               >
                 <Button variant="secondary" className="gap-x-2">
                   Resume <Download size={18} />
